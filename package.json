@@ -28,5 +28,9 @@
     "lint": "tslint -p .",
     "prepublish": "npm run build && npm run lint",
     "prestart": "npm run prepublish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amittkSharma/download-zip-files"
   }
 }
