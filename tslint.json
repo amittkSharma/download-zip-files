@@ -1,0 +1,22 @@
+{
+  "extends": "tslint-checker/tslint",
+  "rules": {
+    "await-promise": false,
+    "interface-name": false,
+    "no-console": false,
+    "no-dynamic-delete": false,
+    "no-floating-promises": false,
+    "no-inferrable-types": false,
+    "no-inferred-empty-object-type": false,
+    "no-magic-numbers": false,
+    "no-non-null-assertion": false,
+    "no-null-keyword": false,
+    "no-submodule-imports": false,
+    "ordered-imports": false,
+    "prefer-readonly": false,
+    "prefer-template": false,
+    "restrict-plus-operands": false,
+    "switch-default": false,
+    "use-default-type-parameter": false
+  }
+}
