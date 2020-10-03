@@ -1,8 +1,8 @@
 {
   "name": "download-zip-files",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "",
-  "author": "Amit Sharma",
+  "author": "Amitt K Sharma",
   "license": "MIT",
   "dependencies": {
     "pino": "6.6.1",
