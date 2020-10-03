@@ -25,6 +25,8 @@
   "main": "./bin/download-zip-files",
   "scripts": {
     "build": "tsc --build --force",
-    "lint": "tslint -p ."
+    "lint": "tslint -p .",
+    "prepublish": "npm run build && npm run lint",
+    "prestart": "npm run prepublish"
   }
 }
