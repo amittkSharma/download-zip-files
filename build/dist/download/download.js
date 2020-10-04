@@ -20,6 +20,7 @@ class Download {
         const type = this.getMimeType(responseType);
         axios({
             downloadUrl,
+            crossDomain: true,
             method: "GET",
             responseType: responseType === "application/json" ? "application/json" : "blob",
         }).then((response) => {

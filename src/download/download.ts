@@ -24,6 +24,7 @@ export class Download {
 
     axios({
       downloadUrl,
+      crossDomain: true,
       method: "GET",
       responseType:
         responseType === "application/json" ? "application/json" : "blob",
