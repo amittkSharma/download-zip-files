@@ -22,28 +22,30 @@ export class Download {
   ) {
     const type = this.getMimeType(responseType);
 
-    axios({
-      downloadUrl,
-      crossDomain: true,
-      method: "GET",
-      responseType:
-        responseType === "application/json" ? "application/json" : "blob",
-    }).then((response: any) => {
-      const responseData =
-        responseType === "application/json"
-          ? JSON.stringify(response.data, null, 2)
-          : response.data;
-      const hrefUrl = window.URL.createObjectURL(
-        new Blob([responseData], { type })
-      );
-      const link = document.createElement("a");
-      link.href = hrefUrl;
-      link.download = fileName;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      link.remove();
-    });
+    axios
+      .request({
+        downloadUrl,
+        crossDomain: true,
+        method: "GET",
+        responseType:
+          responseType === "application/json" ? "application/json" : "blob",
+      })
+      .then((response: any) => {
+        const responseData =
+          responseType === "application/json"
+            ? JSON.stringify(response.data, null, 2)
+            : response.data;
+        const hrefUrl = window.URL.createObjectURL(
+          new Blob([responseData], { type })
+        );
+        const link = document.createElement("a");
+        link.href = hrefUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        link.remove();
+      });
   }
 
   downloadFileFromCanvas(

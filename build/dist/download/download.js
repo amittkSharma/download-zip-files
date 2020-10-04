@@ -18,12 +18,14 @@ class Download {
     }
     downloadFileFromUrl(downloadUrl, responseType, fileName) {
         const type = this.getMimeType(responseType);
-        axios({
+        axios
+            .request({
             downloadUrl,
             crossDomain: true,
             method: "GET",
             responseType: responseType === "application/json" ? "application/json" : "blob",
-        }).then((response) => {
+        })
+            .then((response) => {
             const responseData = responseType === "application/json"
                 ? JSON.stringify(response.data, null, 2)
                 : response.data;
