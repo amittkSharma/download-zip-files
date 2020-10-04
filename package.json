@@ -1,5 +1,5 @@
 {
-  "name": "download-zip-facilitator",
+  "name": "files-facilitator",
   "version": "1.0.0",
   "description": "",
   "author": "Amitt K Sharma",
@@ -22,7 +22,7 @@
     "@types/node": "14.11.2",
     "@types/react": "16.9.32"
   },
-  "main": "./bin/download-zip-files",
+  "main": "./bin/files-facilitator",
   "scripts": {
     "build": "tsc --build --force",
     "lint": "tslint -p .",
