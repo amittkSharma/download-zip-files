@@ -1,6 +1,6 @@
 {
   "name": "files-facilitator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "author": "Amitt K Sharma",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "@types/react": "16.9.32"
   },
   "main": "./bin/files-facilitator",
+  "types": "build/dist/index.d.ts",
   "scripts": {
     "build": "tsc --build --force",
     "lint": "tslint -p .",

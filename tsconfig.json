@@ -27,7 +27,8 @@
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "declaration": true
   },
   "include": ["src", "src/**/*.json"],
   "exclude": ["node_modules"]
