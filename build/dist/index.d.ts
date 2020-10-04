@@ -1,1 +1,4 @@
-export * from './download/download';
+import { Download } from "./download";
+export declare class FileFacilitator {
+    download: Download;
+}

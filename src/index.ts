@@ -1,1 +1,5 @@
-export * from './download/download'
+import { Download } from "./download";
+
+export class FileFacilitator {
+  public download = new Download();
+}

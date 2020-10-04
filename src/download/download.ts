@@ -2,7 +2,7 @@ import { DataUrlConfig, ResponseType } from "../models";
 // tslint:disable-next-line: no-var-requires
 const axios = require("axios");
 
-class Download {
+export class Download {
   private getMimeType(responseType: ResponseType): any {
     switch (responseType) {
       case "application/json":
@@ -15,11 +15,11 @@ class Download {
         return "application/json";
     }
   }
-  downloadFileFromUrl = (
+  downloadFileFromUrl(
     downloadUrl: string,
     responseType: ResponseType,
     fileName: string
-  ) => {
+  ) {
     const type = this.getMimeType(responseType);
 
     axios({
@@ -43,16 +43,16 @@ class Download {
       document.body.removeChild(link);
       link.remove();
     });
-  };
+  }
 
-  downloadFileFromCanvas = (
+  downloadFileFromCanvas(
     canvas: HTMLCanvasElement,
     fileName: string,
     dataUrlConfig: DataUrlConfig
-  ) => {
+  ) {
     const dataUrl = canvas.toDataURL(dataUrlConfig.type, dataUrlConfig.quality);
     this.downloadSingleFile(dataUrl, fileName);
-  };
+  }
 
   private downloadSingleFile(uri: string, name: string) {
     const link = document.createElement("a");
@@ -64,5 +64,3 @@ class Download {
     link.remove();
   }
 }
-
-export const download = new Download();
