@@ -27,8 +27,7 @@ export class Download {
         url,
         crossDomain: true,
         method: "GET",
-        responseType:
-          responseType === "application/json" ? "application/json" : "blob",
+        responseType: responseType === "application/json" ? "json" : "blob",
       })
       .then((response: any) => {
         const responseData =
