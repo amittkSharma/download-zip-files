@@ -16,15 +16,15 @@ export class Download {
     }
   }
   downloadFileFromUrl(
-    downloadUrl: string,
+    url: string,
     responseType: ResponseType,
     fileName: string
   ) {
     const type = this.getMimeType(responseType);
-
+    console.log(`Url: ${url}`);
     axios
       .request({
-        downloadUrl,
+        url,
         crossDomain: true,
         method: "GET",
         responseType:
