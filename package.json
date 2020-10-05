@@ -1,10 +1,11 @@
 {
   "name": "files-facilitator",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "",
   "author": "Amitt K Sharma",
   "license": "MIT",
   "dependencies": {
+    "glob": "^7.1.6",
     "pino": "6.6.1",
     "pino-pretty": "4.2.1",
     "tslib": "2.0.1",
@@ -14,6 +15,7 @@
     "react": "16.13.1"
   },
   "devDependencies": {
+    "@types/glob": "^7.1.1",
     "@types/react-dom": "16.9.6",
     "tslint": "6.1.3",
     "tslint-checker": "4.1.2",

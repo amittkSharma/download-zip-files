@@ -2,18 +2,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Download = void 0;
 // tslint:disable-next-line: no-var-requires
-const axios = require("axios");
+const axios = require('axios');
 class Download {
     getMimeType(responseType) {
         switch (responseType) {
-            case "application/json":
-                return "application/json";
-            case "image/jpeg":
-                return "image/jpeg";
-            case "video/mp4":
-                return "video/mp4";
+            case 'application/json':
+                return 'application/json';
+            case 'image/jpeg':
+                return 'image/jpeg';
+            case 'video/mp4':
+                return 'video/mp4';
             default:
-                return "application/json";
+                return 'application/json';
         }
     }
     downloadFileFromUrl(url, responseType, fileName) {
@@ -23,15 +23,15 @@ class Download {
             .request({
             url,
             crossDomain: true,
-            method: "GET",
-            responseType: responseType === "application/json" ? "json" : "blob",
+            method: 'GET',
+            responseType: responseType === 'application/json' ? 'json' : 'blob',
         })
             .then((response) => {
-            const responseData = responseType === "application/json"
+            const responseData = responseType === 'application/json'
                 ? JSON.stringify(response.data, null, 2)
                 : response.data;
             const hrefUrl = window.URL.createObjectURL(new Blob([responseData], { type }));
-            const link = document.createElement("a");
+            const link = document.createElement('a');
             link.href = hrefUrl;
             link.download = fileName;
             document.body.appendChild(link);
@@ -45,7 +45,7 @@ class Download {
         this.downloadSingleFile(dataUrl, fileName);
     }
     downloadSingleFile(uri, name) {
-        const link = document.createElement("a");
+        const link = document.createElement('a');
         link.download = name;
         link.href = uri;
         document.body.appendChild(link);

@@ -1,4 +1,4 @@
-import { DataUrlConfig, ResponseType } from "../models";
+import { DataUrlConfig, ResponseType } from '../models';
 export declare class Download {
     private getMimeType;
     downloadFileFromUrl(url: string, responseType: ResponseType, fileName: string): void;

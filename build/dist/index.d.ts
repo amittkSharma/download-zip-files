@@ -1,4 +1,6 @@
-import { Download } from "./download";
+import { DirectoryOps } from './directory-ops/directory-ops';
+import { FileNames } from './file-names';
 export declare class FileFacilitator {
-    download: Download;
+    directoryOps: DirectoryOps;
+    fileNames: FileNames;
 }
