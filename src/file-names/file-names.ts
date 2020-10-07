@@ -7,7 +7,7 @@ export class FileNames {
     return `${fileName}_${dformat}.json`
   }
 
-  removeFileExtension(fileName: string) {
+  getFileNameWithNoExtenstion(fileName: string) {
     const fileNameWithNoExt = fileName.split('.').slice(0, -1).join('.')
     return fileNameWithNoExt.toLowerCase()
   }
