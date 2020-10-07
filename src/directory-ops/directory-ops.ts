@@ -4,8 +4,8 @@ import { log } from '../utils'
 import path = require('path')
 
 export class DirectoryOps {
-  createCoachEditorConfigDirectory(dirName: string): void {
-    const directoryPath = path.join(__dirname, dirName)
+  createCoachEditorConfigDirectory(dirName: string, dirPath?: string): void {
+    const directoryPath = path.join(dirPath || __dirname, dirName)
     if (!fs.existsSync(directoryPath)) {
       log.info(`Directory will be created at location: ${directoryPath}`)
       fs.mkdirSync(directoryPath)
