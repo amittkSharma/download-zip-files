@@ -9,7 +9,7 @@ class FileNames {
             return `${fileName}_${dformat}.json`;
         };
     }
-    removeFileExtension(fileName) {
+    getFileNameWithNoExtenstion(fileName) {
         const fileNameWithNoExt = fileName.split('.').slice(0, -1).join('.');
         return fileNameWithNoExt.toLowerCase();
     }

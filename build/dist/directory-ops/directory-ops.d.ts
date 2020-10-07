@@ -1,4 +1,4 @@
 export declare class DirectoryOps {
-    createCoachEditorConfigDirectory(dirName: string): void;
+    createDirectory(dirName: string, dirPath?: string): void;
     globSort(fileExt: string, dir: string): string[];
 }

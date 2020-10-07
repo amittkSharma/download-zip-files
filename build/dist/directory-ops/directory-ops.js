@@ -6,8 +6,8 @@ const glob_1 = require("glob");
 const utils_1 = require("../utils");
 const path = require("path");
 class DirectoryOps {
-    createCoachEditorConfigDirectory(dirName) {
-        const directoryPath = path.join(__dirname, dirName);
+    createDirectory(dirName, dirPath) {
+        const directoryPath = path.join(dirPath || __dirname, dirName);
         if (!fs.existsSync(directoryPath)) {
             utils_1.log.info(`Directory will be created at location: ${directoryPath}`);
             fs.mkdirSync(directoryPath);
